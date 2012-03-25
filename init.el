@@ -53,6 +53,7 @@
 (require 'haml-mode)
 
 (add-to-list 'load-path "~/.emacs.d/plugins/mode-compile")
+(add-to-list 'load-path "~/.emacs.d/plugins/rspec-mode")
 (require 'rspec-mode)
 
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
