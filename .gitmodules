@@ -11,7 +11,7 @@
   path = "plugins/mode-compile"
   url = "http://github.com/emacsmirror/mode-compile.git"
 [submodule "rspec-mode"]
-  path = "plugins/rspec-mode"]
+  path = "plugins/rspec-mode"
   url = "http://github.com/pezra/rspec-mode.git"
 
 [submodule "themes/solarized"]
