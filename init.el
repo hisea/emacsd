@@ -6,6 +6,9 @@
 ;;(setq mac-option-modifier 'alt)
 ;;(setq mac-control-modifier 'alt)
 
+(setq ns-command-modifier 'meta)
+(setq ns-function-modifier 'super)
+
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (setq-default tab-width 2)
