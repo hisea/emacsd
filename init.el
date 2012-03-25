@@ -1,8 +1,9 @@
 (push "/usr/local/bin" exec-path)
 
-(setq mac-command-modifier 'meta)
+;; Mac keyboard modifier key
+;;(setq mac-command-modifier 'meta)
+;;(setq mac-option-modifier 'alt)
 ;;(setq mac-control-modifier 'alt)
-;;(setq mac-option-modifier 'control)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -51,7 +52,19 @@
 
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
-(yas/load-directory
- (concat "~/.emacs.d/plugins/yasnippets-rails/rails-snippets/"))
+
+(yas/load-directory "~/.emacs.d/plugins/yasnippets-rails/rails-snippets")
 (yas/initialize)
+
+
+;; Theme
+(add-to-list 'custom-theme-load-path 
+             "~/.emacs.d/themes/emacs-color-theme-solarized")
+(add-to-list 'custom-theme-load-path 
+             "~/.emacs.d/themes/zenburn-emacs")
+
+(load-theme 'solarized-light t)
+;;(load-theme 'solarized-dark t) ;; solarized dark theme 
+;;(load-theme 'tango' t)
+;;(load-theme 'zenburn' t)
 
