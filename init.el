@@ -33,20 +33,25 @@
 (package-initialize)
 
 
-;; ido
+;; start of plugins
 (require 'ido)
-(ido-mode t);; ;; rinari
+(ido-mode t)
 
+;; Rinari
+(add-to-list 'load-path "~/.emacs.d/plugins/rinari")
 (require 'rinari)
-
-(require 'sass-mode)
 
 ;; Textmate mode
 (require 'textmate)
 (textmate-mode)
 
+(require 'sass-mode)
+
 (require 'haml-mode)
 
-(add-to-list 'load-path
-              "~/.emacs.d/plugins/yasnippet")
-(require 'yasnippet-bundle)
+(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas/load-directory
+ (concat "~/.emacs.d/plugins/yasnippets-rails/rails-snippets/"))
+(yas/initialize)
+
