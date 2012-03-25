@@ -16,6 +16,19 @@
 [submodule "coffee-mode"]
   path = "plugins/coffee-mode"
   url = "http://github.com/defunkt/coffee-mode.git"
+[submodule "sass-mode"]
+  path = "plugins/sass-mode"
+  url = "http://github.com/nex3/sass-mode.git"
+[submodule "haml-mode"]
+  path = "plugins/haml-mode"
+  url = "http://github.com/nex3/haml-mode.git"
+[submodule "rvm.el"]
+  path = "plugins/rvm.el"
+  url = "http://github.com/senny/rvm.el.git"
+[submodule "textmate.el"]
+  path = "plugins/textmate.el"
+  url = "http://github.com/defunkt/textmate.el.git"
+
 
 [submodule "themes/solarized"]
   path = "themes/emacs-color-theme-solarized"
