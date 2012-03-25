@@ -1,0 +1,16 @@
+[submodule "rinari"]
+  path = "plugins/rinari"
+  url = "http://github.com/technomancy/rinari.git"
+[submodule "yasnippet"]
+  path = "plugins/yasnippet"
+  url = "http://github.com/capitaomorte/yasnippet.git"
+[submodule "yasnippets-rails"]
+  path = "plugins/yasnippets-rails"
+  url = "http://github.com/eschulte/yasnippets-rails.git"
+
+[submodule "themes/solarized"]
+  path = "themes/emacs-color-theme-solarized"
+  url = "http://github.com/altercation/solarized.git"
+[submodule "themes/zenburn-emacs"]
+  path = "themes/zenburn-emacs"
+  url = "http://github.com/bbatsov/zenburn-emacs.git"
