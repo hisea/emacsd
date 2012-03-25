@@ -46,9 +46,14 @@
 (require 'textmate)
 (textmate-mode)
 
+(require 'rvm)
+(rvm-use-default) ;; use rvm's default ruby for the current Emacs session
+
 (require 'sass-mode)
-(require 'rspec-mode)
 (require 'haml-mode)
+
+(add-to-list 'load-path "~/.emacs.d/plugins/mode-compile")
+(require 'rspec-mode)
 
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
@@ -63,8 +68,8 @@
 (add-to-list 'custom-theme-load-path 
              "~/.emacs.d/themes/zenburn-emacs")
 
-(load-theme 'solarized-light t)
+;;(load-theme 'solarized-light t)
 ;;(load-theme 'solarized-dark t) ;; solarized dark theme 
-;;(load-theme 'tango' t)
+(load-theme 'tango' t)
 ;;(load-theme 'zenburn' t)
 
