@@ -13,6 +13,9 @@
 [submodule "rspec-mode"]
   path = "plugins/rspec-mode"
   url = "http://github.com/pezra/rspec-mode.git"
+[submodule "coffee-mode"]
+  path = "plugins/coffee-mode"]
+  url = "http://github.com/defunkt/coffee-mode.git"
 
 [submodule "themes/solarized"]
   path = "themes/emacs-color-theme-solarized"

@@ -56,12 +56,43 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/rspec-mode")
 (require 'rspec-mode)
 
+(add-to-list 'load-path "~/.emacs.d/plugins/coffee-mode")
+(require 'coffee-mode)
+
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 
 (yas/load-directory "~/.emacs.d/plugins/yasnippets-rails/rails-snippets")
 (yas/initialize)
 
+
+;; Files Types
+
+;;coffee
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+
+;;rails
+(defun ruby-mode-hook ()
+  (autoload 'ruby-mode "ruby-mode" nil t)
+  (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("\\.rb\\'" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("\\.ru\\'" . ruby-mode))
+  (add-hook 'ruby-mode-hook '(lambda ()
+                               (setq ruby-deep-arglist t)
+                               (setq ruby-deep-indent-paren nil)
+                               (setq c-tab-always-indent nil)
+                               (require 'inf-ruby)
+                               (require 'ruby-compilation))))
+
+;; Yaml
+(defun yaml-mode-hook ()
+  (autoload 'yaml-mode "yaml-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+  (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode)))
 
 ;; Theme
 (add-to-list 'custom-theme-load-path 
