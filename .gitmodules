@@ -7,6 +7,9 @@
 [submodule "yasnippets-rails"]
   path = "plugins/yasnippets-rails"
   url = "http://github.com/eschulte/yasnippets-rails.git"
+[submodule "mode-compile"]
+  path = "plugins/mode-compile"
+  url = "http://github.com/emacsmirror/mode-compile.git"
 
 [submodule "themes/solarized"]
   path = "themes/emacs-color-theme-solarized"

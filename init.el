@@ -47,7 +47,7 @@
 (textmate-mode)
 
 (require 'sass-mode)
-
+(require 'rspec-mode)
 (require 'haml-mode)
 
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
