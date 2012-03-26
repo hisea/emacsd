@@ -28,7 +28,9 @@
 [submodule "textmate.el"]
   path = "plugins/textmate.el"
   url = "http://github.com/defunkt/textmate.el.git"
-
+[submodule "cucumber.el"]
+  path = "plugins/cucumber.el"
+  url = "http://github.com/michaelklishin/cucumber.el.git"
 
 [submodule "themes/solarized"]
   path = "themes/emacs-color-theme-solarized"

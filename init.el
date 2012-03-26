@@ -41,9 +41,9 @@
 (add-to-list 'custom-theme-load-path 
              "~/.emacs.d/themes/zenburn-emacs")
 
-;;(load-theme 'solarized-light t)
+(load-theme 'solarized-light t)
 ;;(load-theme 'solarized-dark t) ;; solarized dark theme 
-(load-theme 'tango' t)
+;;(load-theme 'tango' t)
 ;;(load-theme 'zenburn' t)
 
 
@@ -73,6 +73,10 @@
 (add-to-list 'load-path "~/.emacs.d/plugins/sass-mode")
 (require 'sass-mode)
 
+;;cucumber feature mode
+(add-to-list 'load-path "~/.emacs.d/plugins/cucumber.el")
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 (add-to-list 'load-path "~/.emacs.d/plugins/mode-compile")
 (add-to-list 'load-path "~/.emacs.d/plugins/rspec-mode")
