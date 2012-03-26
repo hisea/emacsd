@@ -1,0 +1,33 @@
+[submodule "plugins/yasnippet"]
+	path = plugins/yasnippet
+	url = https://github.com/capitaomorte/yasnippet.git
+[submodule "plugins/coffee-mode"]
+	path = plugins/coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git
+[submodule "plugins/mode-compile"]
+	path = plugins/mode-compile
+	url = https://github.com/emacsmirror/mode-compile.git
+[submodule "plugins/rvm.el"]
+	path = plugins/rvm.el
+	url = https://github.com/senny/rvm.el.git
+[submodule "plugins/cucumber.el"]
+	path = plugins/cucumber.el
+	url = https://github.com/michaelklishin/cucumber.el.git
+[submodule "plugins/rinari"]
+	path = plugins/rinari
+	url = https://github.com/technomancy/rinari.git
+[submodule "plugins/sass-mode"]
+	path = plugins/sass-mode
+	url = https://github.com/nex3/sass-mode.git
+[submodule "plugins/yasnippets-rails"]
+	path = plugins/yasnippets-rails
+	url = https://github.com/eschulte/yasnippets-rails.git
+[submodule "plugins/haml-mode"]
+	path = plugins/haml-mode
+	url = https://github.com/nex3/haml-mode.git
+[submodule "plugins/rspec-mode"]
+	path = plugins/rspec-mode
+	url = https://github.com/pezra/rspec-mode.git
+[submodule "plugins/textmate.el"]
+	path = plugins/textmate.el
+	url = https://github.com/defunkt/textmate.el.git
