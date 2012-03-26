@@ -37,9 +37,9 @@
 
 ;; Theme
 (add-to-list 'custom-theme-load-path 
-             "~/.emacs.d/themes/emacs-color-theme-solarized")
+             "~/.emacs.d/themes/solarized")
 (add-to-list 'custom-theme-load-path 
-             "~/.emacs.d/themes/zenburn-emacs")
+             "~/.emacs.d/themes/zenburn")
 
 (load-theme 'solarized-light t)
 ;;(load-theme 'solarized-dark t) ;; solarized dark theme 
