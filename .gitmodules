@@ -31,3 +31,9 @@
 [submodule "plugins/textmate.el"]
 	path = plugins/textmate.el
 	url = https://github.com/defunkt/textmate.el.git
+[submodule "themes/solarized"]
+	path = themes/solarized
+	url = https://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "themes/zenburn"]
+	path = themes/zenburn
+	url = https://github.com/bbatsov/zenburn-emacs.git
