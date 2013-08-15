@@ -78,7 +78,7 @@ ido-max-prospects 10)
 
 ;;Enable Yasnippets
 (yas-global-mode 1)
-
+(add-to-list 'yas/root-directory "~/.emacs.d/snippets/yasnippet-snippets")
 ;; (require 'smex)
 
 (smex-initialize)
