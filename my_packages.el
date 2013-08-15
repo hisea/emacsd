@@ -24,6 +24,8 @@
     helm-ag
     org
     yasnippet
+    haml-mode
+    slim-mode
     rinari
     smex)
   "List of packages needs to be installed at launch")
