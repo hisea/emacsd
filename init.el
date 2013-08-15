@@ -31,6 +31,7 @@
 (column-number-mode t)
 (set-fringe-style -1)
 (tooltip-mode -1)
+(global-linum-mode 1);
 
 ;;Remove Trailing Space on Save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -59,6 +60,8 @@
 ;; (require 'textmate)
 (textmate-mode)
 
-(require 'smex)
+;; (require 'smex)
 
-;; (smex-initialize)
+(smex-initialize)
+;; (require 'git-gutter)
+(global-git-gutter-mode t)

@@ -14,6 +14,8 @@
     coffee-mode
     ace-jump-mode
     switch-window
+    git-gutter
+    magit
     smex)
   "List of packages needs to be installed at launch")
 
