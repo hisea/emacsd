@@ -16,6 +16,8 @@
     switch-window
     git-gutter
     magit
+    yasnippet
+    rinari
     smex)
   "List of packages needs to be installed at launch")
 
