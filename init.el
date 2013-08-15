@@ -11,8 +11,10 @@
 ;;(setq mac-option-modifier 'meta)
 ;;(setq mac-control-modifier 'alt)
 
-;;(setq ns-command-modifier 'meta)
-;;(setq ns-function-modifier 'super)
+;; (setq ns-command-modifier 'meta)
+(setq ns-function-modifier 'super)
+
+(global-set-key (kbd "s-SPC") 'set-mark-command)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -20,6 +22,7 @@
 (setq-default indent-tabs-mode nil)
 (setq inhibit-startup-message t)
 (setq visible-bell t)
+
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -30,12 +33,15 @@
 (show-paren-mode t)
 (column-number-mode t)
 (set-fringe-style -1)
+(electric-pair-mode t)
 (tooltip-mode -1)
 (global-linum-mode 1);
+(hl-line-mode t) ; turn on highlight line mode
 
 ;;Remove Trailing Space on Save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq nobreak-char-display t)
+(setq require-final-newline 'visit-save)
 ;; Font
 
 (set-frame-font "Liberation Mono-14")
@@ -46,7 +52,7 @@
 
 ;; Startup Size
 (if window-system
-      (set-frame-size (selected-frame) 180 70))
+      (set-frame-size (selected-frame) 170 50))
 
 ;; Theme
 (load-theme 'solarized-dark t)
@@ -54,15 +60,55 @@
 ;; Package
 ;; (require 'switch-window)
 
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; (require 'ido)
 (ido-mode t)
-(setq ido-enable-flex-matching t)
+(setq ido-enable-prefix nil
+ido-enable-flex-matching t
+ido-use-filename-at-point 'guess
+ido-max-prospects 10)
 
 ;; (require 'textmate)
 (textmate-mode)
 
+;; Highlight Current Line
+(hl-line-mode)
+
+;;Enable Yasnippets
+(yas-global-mode 1)
+
 ;; (require 'smex)
 
 (smex-initialize)
+(global-set-key [(meta x)] (lambda ()
+                             (interactive)
+                             (or (boundp 'smex-cache)
+                                 (smex-initialize))
+                             (global-set-key [(meta x)] 'smex)
+                             (smex)))
+
+(global-set-key [(shift meta x)] (lambda ()
+                                   (interactive)
+                                   (or (boundp 'smex-cache)
+                                       (smex-initialize))
+                                   (global-set-key [(shift meta x)] 'smex-major-mode-commands)
+                                   (smex-major-mode-commands)))
+(require 'git-gutter-fringe)
 ;; (require 'git-gutter)
-(global-git-gutter-mode t)
+(fringe-mode)
+(git-gutter)
+
+(global-set-key (kbd "\C-c\C-c") 'comment-or-uncomment-region) ;; highlight region and comment
+
+
+;; Ruby Mode Adjustments
+;; --------------------
+;; making ruby mode take effect in our odd Rails project files
+(setq auto-mode-alist (cons '("\\.rake\\'" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("Gemfile*" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.erb\\'" . rhtml-mode) auto-mode-alist))
+(add-hook 'ruby-mode-hook
+     (lambda () (local-set-key (kbd "RET") 'reindent-then-newline-and-indent))) ;; hitting enter will indent.

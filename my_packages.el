@@ -14,8 +14,15 @@
     coffee-mode
     ace-jump-mode
     switch-window
-    git-gutter
+    flycheck
+    git-gutter-fringe
     magit
+    auto-complete
+    exec-path-from-shell
+    ag
+    helm
+    helm-ag
+    org
     yasnippet
     rinari
     smex)
