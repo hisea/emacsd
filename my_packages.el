@@ -9,7 +9,9 @@
 ;; Guarantee all packages are installed on start
 (defvar packages-list
   '(color-theme-solarized
+    windmove
     textmate
+    highlight-indentation
     sass-mode
     coffee-mode
     ace-jump-mode
@@ -26,6 +28,7 @@
     yasnippet
     haml-mode
     slim-mode
+    js2-mode
     rinari
     smex)
   "List of packages needs to be installed at launch")

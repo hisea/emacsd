@@ -14,8 +14,6 @@
 ;; (setq ns-command-modifier 'meta)
 (setq ns-function-modifier 'super)
 
-(global-set-key (kbd "s-SPC") 'set-mark-command)
-
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (setq-default tab-width 2)
@@ -77,8 +75,12 @@ ido-max-prospects 10)
 (hl-line-mode)
 
 ;;Enable Yasnippets
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"            ;; personal snippets
+        "~/.emacs.d/yasnippet-snippets"    ;; the default collection
+        ))
 (yas-global-mode 1)
-(add-to-list 'yas/root-directory "~/.emacs.d/snippets/yasnippet-snippets")
+
 ;; (require 'smex)
 
 (smex-initialize)
@@ -95,13 +97,14 @@ ido-max-prospects 10)
                                        (smex-initialize))
                                    (global-set-key [(shift meta x)] 'smex-major-mode-commands)
                                    (smex-major-mode-commands)))
-(require 'git-gutter-fringe)
-;; (require 'git-gutter)
+
+;;Git-Gutter-Fringe Plus
 (fringe-mode)
-(git-gutter)
-
-(global-set-key (kbd "\C-c\C-c") 'comment-or-uncomment-region) ;; highlight region and comment
-
+(require 'git-gutter-fringe)
+(set-face-foreground 'git-gutter-fr:modified "cyan3")
+(set-face-foreground 'git-gutter-fr:added    "SeaGreen3")
+(set-face-foreground 'git-gutter-fr:deleted  "orchid3")
+(global-git-gutter-mode t)
 
 ;; Ruby Mode Adjustments
 ;; --------------------
@@ -111,4 +114,24 @@ ido-max-prospects 10)
 (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.erb\\'" . rhtml-mode) auto-mode-alist))
 (add-hook 'ruby-mode-hook
-     (lambda () (local-set-key (kbd "RET") 'reindent-then-newline-and-indent))) ;; hitting enter will indent.
+          (lambda () (local-set-key (kbd "RET") 'reindent-then-newline-and-indent))) ;; hitting enter will indent.
+(add-hook 'haml-mode-hook
+          (lambda () (highlight-indentation-mode)))
+;; Key Mappings
+(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "C-x b") 'ibuffer)
+
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+(global-set-key (kbd "s-F") 'helm-ag)
+
+(global-set-key (kbd "s-1") 'delete-other-windows)
+(global-set-key (kbd "s-2") 'split-window-below)
+(global-set-key (kbd "s-3") 'split-window-right)
+(global-set-key (kbd "s-0") 'delete-window)
+
+(windmove-default-keybindings 'super)
+(global-set-key (kbd "\C-c\C-c") 'comment-or-uncomment-region) ;; highlight region and comment
+(define-key global-map (kbd "s-`") 'ace-jump-mode)
