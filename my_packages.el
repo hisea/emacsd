@@ -12,11 +12,18 @@
     windmove
     textmate
     highlight-indentation
+    dired-details+
     sass-mode
     coffee-mode
     ace-jump-mode
     switch-window
-    flycheck
+    flymake
+    flymake-cursor
+    flymake-jshint
+    flymake-ruby
+    tabbar
+    elixir-mode
+    elixir-mix
     git-gutter-fringe
     magit
     auto-complete

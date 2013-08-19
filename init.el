@@ -1,60 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (load "my_packages.el")
 
-;; Transparent Background
-(set-frame-parameter (selected-frame) 'alpha '(95 80))
-(add-to-list 'default-frame-alist '(alpha 95 80))
-
-
-;; Mac keyboard modifier key
-;;(setq mac-command-modifier 'alt)
-;;(setq mac-option-modifier 'meta)
-;;(setq mac-control-modifier 'alt)
-
-;; (setq ns-command-modifier 'meta)
-(setq ns-function-modifier 'super)
-
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-(setq-default tab-width 2)
-(setq-default indent-tabs-mode nil)
-(setq inhibit-startup-message t)
-(setq visible-bell t)
-
-
-(fset 'yes-or-no-p 'y-or-n-p)
-
-(delete-selection-mode t)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(blink-cursor-mode t)
-(show-paren-mode t)
-(column-number-mode t)
-(set-fringe-style -1)
-(electric-pair-mode t)
-(tooltip-mode -1)
-(global-linum-mode 1);
-(hl-line-mode t) ; turn on highlight line mode
-
-;;Remove Trailing Space on Save
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-(setq nobreak-char-display t)
-(setq require-final-newline 'visit-save)
-;; Font
-
-(set-frame-font "Liberation Mono-14")
-(set-fontset-font
-    (frame-parameter nil 'font)
-    'han
-    (font-spec :family "Hiragino Sans GB" ))
-
-;; Startup Size
-(if window-system
-      (set-frame-size (selected-frame) 170 50))
-
-;; Theme
-(load-theme 'solarized-dark t)
-
+(load "my_basic_configs.el")
 ;; Package
 ;; (require 'switch-window)
 
@@ -68,6 +15,7 @@ ido-enable-flex-matching t
 ido-use-filename-at-point 'guess
 ido-max-prospects 10)
 
+(require 'dired-details+)
 ;; (require 'textmate)
 (textmate-mode)
 
@@ -115,23 +63,6 @@ ido-max-prospects 10)
 (setq auto-mode-alist (cons '("\\.erb\\'" . rhtml-mode) auto-mode-alist))
 (add-hook 'ruby-mode-hook
           (lambda () (local-set-key (kbd "RET") 'reindent-then-newline-and-indent))) ;; hitting enter will indent.
-(add-hook 'haml-mode-hook
-          (lambda () (highlight-indentation-mode)))
-;; Key Mappings
-(global-set-key (kbd "M-/") 'hippie-expand)
-(global-set-key (kbd "C-x b") 'ibuffer)
+(add-hook 'haml-mode-hook 'highlight-indentation-mode)
 
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-(global-set-key (kbd "C-r") 'isearch-backward-regexp)
-(global-set-key (kbd "C-M-s") 'isearch-forward)
-(global-set-key (kbd "C-M-r") 'isearch-backward)
-(global-set-key (kbd "s-F") 'helm-ag)
-
-(global-set-key (kbd "s-1") 'delete-other-windows)
-(global-set-key (kbd "s-2") 'split-window-below)
-(global-set-key (kbd "s-3") 'split-window-right)
-(global-set-key (kbd "s-0") 'delete-window)
-
-(windmove-default-keybindings 'super)
-(global-set-key (kbd "\C-c\C-c") 'comment-or-uncomment-region) ;; highlight region and comment
-(define-key global-map (kbd "s-`") 'ace-jump-mode)
+(load "my_bindings.el")
