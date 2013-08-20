@@ -3,3 +3,5 @@ elpa/
 /ac-comphist.dat
 /snippets/yasnippet-snippets/
 /yasnippet-snippets/
+/eshell/history
+/eshell/lastdir
