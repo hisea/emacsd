@@ -35,7 +35,7 @@
     yasnippet
     haml-mode
     slim-mode
-    js2-mode
+    js3-mode
     rinari
     smex)
   "List of packages needs to be installed at launch")

@@ -1,3 +1,7 @@
+;;Get shell exec path
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; Transparent Background
 (set-frame-parameter (selected-frame) 'alpha '(95 80))
 (add-to-list 'default-frame-alist '(alpha 95 80))
@@ -24,6 +28,8 @@
 (tooltip-mode -1)
 (global-linum-mode 1);
 (hl-line-mode t) ; turn on highlight line mode
+
+
 
 ;;Remove Trailing Space on Save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
