@@ -1,5 +1,6 @@
 (require 'tabbar)
 (setq tabbar-background-color "#81908f") ;; the color of the tabbar background
+(setq tabbar-use-images nil)
 
 (custom-set-faces
  '(tabbar-default ((t (:inherit variable-pitch :background "#042028" :foreground "#81908f"))))
@@ -9,3 +10,4 @@
  '(tabbar-selected ((t (:inherit tabbar-default :background "#042028" :weight bold))))
  '(tabbar-separator ((t (:inherit tabbar-default :background "#042028"))))
  '(tabbar-unselected ((t (:inherit tabbar-default :background "#465a61")))))
+

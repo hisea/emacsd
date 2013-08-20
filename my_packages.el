@@ -31,7 +31,6 @@
     exec-path-from-shell
     ag
     helm
-    helm-ag
     org
     yasnippet
     haml-mode

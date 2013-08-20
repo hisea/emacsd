@@ -6,9 +6,7 @@
 (require 'load-directory)
  (load-directory "~/.emacs.d/configs")
 
-;; Package
-;; (require 'switch-window)
-
+;;Get shell exec path
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
@@ -20,11 +18,7 @@ ido-use-filename-at-point 'guess
 ido-max-prospects 10)
 
 (require 'dired-details+)
-;; (require 'textmate)
 (textmate-mode)
-
-;; Highlight Current Line
-(hl-line-mode)
 
 ;;Enable Yasnippets
 (setq yas-snippet-dirs
