@@ -1,11 +1,8 @@
-;; Mac keyboard modifier key
-;;(setq mac-command-modifier 'alt)
-;;(setq mac-option-modifier 'meta)
-;;(setq mac-control-modifier 'alt)
-
-;; (setq ns-command-modifier 'meta)
-(setq ns-function-modifier 'super)
-
+; setting Super ＆ Hyper keys for the Mac keyboard, for emacs running in OS X
+(setq mac-option-modifier 'meta) ; sets the Option key as Hyper
+(setq mac-command-modifier 'super) ; sets the Command key as Meta
+;; (setq mac-control-modifier 'meta) ; sets the Control key as Meta
+(setq ns-function-modifier 'hyper) ; set Mac's Fn key to type Hyper
 
 ;; Key Mappings
 (global-set-key (kbd "M-/") 'hippie-expand)

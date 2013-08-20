@@ -11,6 +11,7 @@
   '(color-theme-solarized
     windmove
     textmate
+    rbenv
     highlight-indentation
     dired-details+
     sass-mode

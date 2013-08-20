@@ -1,7 +1,11 @@
 (add-to-list 'load-path "~/.emacs.d/")
-(load "my_packages.el")
 
+(load "my_packages.el")
 (load "my_basic_configs.el")
+
+(require 'load-directory)
+ (load-directory "~/.emacs.d/configs")
+
 ;; Package
 ;; (require 'switch-window)
 
