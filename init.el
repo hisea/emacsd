@@ -1,10 +1,10 @@
 (add-to-list 'load-path "~/.emacs.d/")
 
 (load "my_packages.el")
-(load "my_basic_configs.el")
+(load "my_basic_config.el")
 
 (require 'load-directory)
- (load-directory "~/.emacs.d/configs")
+ (load-directory "~/.emacs.d/config")
 
 ;;Get shell exec path
 (when (memq window-system '(mac ns))
