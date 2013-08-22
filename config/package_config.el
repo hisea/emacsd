@@ -50,5 +50,6 @@ ido-max-prospects 10)
 (textmate-mode)
 
 ;;Enable Yasnippets
-(setq yas-snippet-dirs '("~/.emacs.d/snippets/rails-snippets"))
+(setq yas-snippet-dirs '("~/.emacs.d/snippets/rails-snippets"
+                         "~/.emacs.d/snippets/elixir-yasnippets"))
 (yas-global-mode 1)

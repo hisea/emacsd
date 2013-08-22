@@ -1,3 +1,6 @@
+
+(require 'elixir-mode)
+
 ;; Ruby Mode Adjustments
 ;; --------------------
 ;; making ruby mode take effect in our odd Rails project files
@@ -10,3 +13,10 @@
 
 (add-hook 'haml-mode-hook 'highlight-indentation-mode)
 (add-hook 'slim-mode-hook 'highlight-indentation-mode)
+
+(add-to-list 'elixir-mode-hook
+             (defun auto-activate-ruby-end-mode-for-elixir-mode ()
+               (set (make-variable-buffer-local 'ruby-end-expand-keywords-before-re)
+                    "\\(?:^\\|\\s-+\\)\\(?:do\\)")
+               (set (make-variable-buffer-local 'ruby-end-check-statement-modifiers) nil)
+               (ruby-end-mode +1)))
