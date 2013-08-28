@@ -11,9 +11,11 @@
   '(color-theme-solarized
     windmove
     textmate
+    markdown-mode
     rbenv
     highlight-indentation
     dired-details+
+    dired+
     sass-mode
     coffee-mode
     ace-jump-mode
@@ -22,9 +24,11 @@
     flymake-cursor
     flymake-jshint
     flymake-ruby
+    flymake-elixir
     tabbar
     elixir-mode
     elixir-mix
+    elixir-yasnippets
     git-gutter-fringe
     magit
     auto-complete

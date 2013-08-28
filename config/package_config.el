@@ -47,6 +47,8 @@ ido-max-prospects 10)
 
 
 (require 'dired-details+)
+(require 'dired+)
+(toggle-diredp-find-file-reuse-dir 1)
 (textmate-mode)
 
 ;;Enable Yasnippets
