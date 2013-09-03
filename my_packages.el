@@ -29,6 +29,7 @@
     elixir-mode
     elixir-mix
     elixir-yasnippets
+    erlang
     git-gutter-fringe
     magit
     auto-complete
