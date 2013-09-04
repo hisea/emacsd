@@ -40,6 +40,7 @@
     yasnippet
     haml-mode
     slim-mode
+    rhtml-mode
     js3-mode
     rinari
     smex)
