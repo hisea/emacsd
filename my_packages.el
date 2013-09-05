@@ -38,6 +38,7 @@
     helm
     org
     yasnippet
+    yaml-mode
     haml-mode
     slim-mode
     rhtml-mode
