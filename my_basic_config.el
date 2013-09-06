@@ -38,6 +38,8 @@
 ;; Font
 
 (set-frame-font "Liberation Mono-14")
+(add-to-list 'default-frame-alist
+             '(font ."Liberation Mono-14"))
 (set-fontset-font
     (frame-parameter nil 'font)
     'han
