@@ -13,9 +13,8 @@
     textmate
     markdown-mode
     rbenv
+    neotree
     highlight-indentation
-    dired-details+
-    dired+
     sass-mode
     coffee-mode
     ace-jump-mode
@@ -25,7 +24,6 @@
     flymake-jshint
     flymake-ruby
     flymake-elixir
-    tabbar
     elixir-mode
     elixir-mix
     elixir-yasnippets
@@ -35,6 +33,7 @@
     auto-complete
     exec-path-from-shell
     ag
+    projectile
     helm
     org
     yasnippet
