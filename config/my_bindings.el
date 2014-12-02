@@ -1,5 +1,4 @@
-
-                                        ; setting Super ＆ Hyper keys for the Mac keyboard, for emacs running in OS X
+; setting Super ＆ Hyper keys for the Mac keyboard, for emacs running in OS X
 (setq mac-option-modifier 'meta) ; sets the Option key as Hyper
 (setq mac-command-modifier 'super) ; sets the Command key as Meta
 ;; (setq mac-control-modifier 'meta) ; sets the Control key as Meta
@@ -26,7 +25,7 @@
 (global-set-key (kbd "s-`") 'ace-jump-mode)
 (global-set-key (kbd "s-\\") 'magit-status)
 
-(global-set-key (kbd "H-h") 'ace-jump-mode)
+(global-set-key (kbd "s-h") 'ace-jump-mode)
 
-(global-set-key (kbd "s-p") 'projectile-fild-file)
+(global-set-key (kbd "s-p") 'fiplr-fild-file)
 (global-set-key (kbd "s-n") 'neotree-toggle)

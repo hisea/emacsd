@@ -9,6 +9,7 @@
 ;; Guarantee all packages are installed on start
 (defvar packages-list
   '(color-theme-solarized
+    base16-theme
     windmove
     textmate
     markdown-mode

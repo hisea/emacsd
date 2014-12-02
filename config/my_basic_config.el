@@ -3,8 +3,8 @@
   (exec-path-from-shell-initialize))
 
 ;; Transparent Background
-(set-frame-parameter (selected-frame) 'alpha '(95 80))
-(add-to-list 'default-frame-alist '(alpha 95 80))
+;; (set-frame-parameter (selected-frame) 'alpha '(95 80))
+;; (add-to-list 'default-frame-alist '(alpha 95 80))
 
 
 (setq make-backup-files nil)
@@ -50,4 +50,4 @@
       (set-frame-size (selected-frame) 170 50))
 
 ;; Theme
-(load-theme 'solarized-dark t)
+(load-theme 'base16-default t)
