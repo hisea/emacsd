@@ -27,5 +27,5 @@
 
 (global-set-key (kbd "s-h") 'ace-jump-mode)
 
-(global-set-key (kbd "s-p") 'fiplr-fild-file)
+(global-set-key (kbd "s-p") 'fiplr-find-file)
 (global-set-key (kbd "s-n") 'neotree-toggle)
