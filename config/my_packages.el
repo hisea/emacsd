@@ -10,6 +10,8 @@
 (defvar packages-list
   '(color-theme-solarized
     base16-theme
+    darcula-theme
+    evil
     windmove
     textmate
     markdown-mode

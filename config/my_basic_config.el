@@ -29,17 +29,15 @@
 (global-linum-mode 1);
 (hl-line-mode t) ; turn on highlight line mode
 
-
-
 ;;Remove Trailing Space on Save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq nobreak-char-display t)
 (setq require-final-newline 'visit-save)
-;; Font
 
-(set-frame-font "Liberation Mono-14")
+;; Font
+(set-frame-font "Liberation Mono For Powerline-13")
 (add-to-list 'default-frame-alist
-             '(font ."Liberation Mono-14"))
+             '(font ."Liberation Mono For Powerline-13"))
 (set-fontset-font
     (frame-parameter nil 'font)
     'han
@@ -50,4 +48,44 @@
       (set-frame-size (selected-frame) 170 50))
 
 ;; Theme
-(load-theme 'base16-default t)
+;; (load-theme 'base16-tomorrow t)
+(require 'darcula-theme)
+
+;; ido mode
+(ido-mode t)
+(setq ido-enable-prefix nil
+ido-enable-flex-matching t
+ido-use-filename-at-point 'guess
+ido-max-prospects 10)
+
+;; Smex
+(smex-initialize)
+(global-set-key [(meta x)] (lambda ()
+                             (interactive)
+                             (or (boundp 'smex-cache)
+                                 (smex-initialize))
+                             (global-set-key [(meta x)] 'smex)
+                             (smex)))
+
+(global-set-key [(shift meta x)] (lambda ()
+                                   (interactive)
+                                   (or (boundp 'smex-cache)
+                                       (smex-initialize))
+                                   (global-set-key [(shift meta x)] 'smex-major-mode-commands)
+                                   (smex-major-mode-commands)))
+
+
+
+
+(textmate-mode)
+
+;;Enable Yasnippets
+(setq yas-snippet-dirs '("~/.emacs.d/yasnippet-snippets"
+                         "~/.emacs.d/snippets/elixir-yasnippets"))
+(yas-global-mode 1)
+(require 'neotree)
+
+;; (projectile-global-mode)
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+(evil-mode 1)
