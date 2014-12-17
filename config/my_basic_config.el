@@ -35,9 +35,9 @@
 (setq require-final-newline 'visit-save)
 
 ;; Font
-(set-frame-font "Liberation Mono For Powerline-13")
+(set-frame-font "Liberation Mono For Powerline-14")
 (add-to-list 'default-frame-alist
-             '(font ."Liberation Mono For Powerline-13"))
+             '(font ."Liberation Mono For Powerline-14"))
 (set-fontset-font
     (frame-parameter nil 'font)
     'han
