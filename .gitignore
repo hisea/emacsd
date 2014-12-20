@@ -4,3 +4,7 @@ elpa/
 /eshell/history
 /eshell/lastdir
 /snippets
+async-bytecomp.log
+ido.last
+projectile-bookmarks.eld
+smex-items

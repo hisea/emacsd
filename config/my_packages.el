@@ -11,9 +11,13 @@
   '(color-theme-solarized
     base16-theme
     darcula-theme
+    alchemist
     evil
+    evil-leader
+    company
     windmove
     textmate
+    git-gutter
     markdown-mode
     rbenv
     neotree
@@ -28,14 +32,12 @@
     flymake-ruby
     flymake-elixir
     elixir-mode
-    elixir-mix
     elixir-yasnippets
     erlang
-    git-gutter-fringe
     magit
-    auto-complete
     exec-path-from-shell
     ag
+    grizzl
     projectile
     helm
     org

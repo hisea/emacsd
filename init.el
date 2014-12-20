@@ -6,5 +6,3 @@
 
 ;; (require 'load-directory)
 ;;  (load-directory "~/.emacs.d/config")
-
-(load "my_bindings.el")
