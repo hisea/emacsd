@@ -118,10 +118,12 @@ ido-max-prospects 10)
   "p" 'projectile-find-file
   "n" 'neotree-toggle
   "\\" 'ace-jump-mode
+  "/" 'evilnc-comment-or-uncomment-lines
   "b" 'ibuffer)
 
 ;; Key Mappings
-(global-set-key (kbd "M-/") 'hippie-expand)
+;; (global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "M-/") 'evilnc-comment-or-uncomment-lines)
 (global-set-key (kbd "s-b") 'ibuffer)
 (global-set-key (kbd "s-<backspace>") 'kill-whole-line)
 

@@ -7,7 +7,7 @@
 (setq auto-mode-alist (cons '("\\.rake\\'" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("Gemfile*" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.erb\\'" . rhtml-mode) auto-mode-alist))
+;; (setq auto-mode-alist (cons '("\\.erb\\'" . rhtml-mode) auto-mode-alist))
 
 (add-hook 'haml-mode-hook 'highlight-indentation-mode)
 (add-hook 'slim-mode-hook 'highlight-indentation-mode)
@@ -28,3 +28,20 @@
         (newline-mark 10 [182 10]) ; 10 LINE FEED
         (tab-mark 9 [8658 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
         ))
+
+(require 'web-mode)
+(setq web-mode-markup-indent-offset 2)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+
+(setq web-mode-engines-alist
+      '(("php"    . "\\.phtml\\'")
+        ("php"  . "\\.php\\."))
+      )

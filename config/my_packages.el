@@ -14,6 +14,7 @@
     alchemist
     evil
     evil-leader
+    evil-nerd-commenter
     company
     windmove
     textmate
@@ -37,11 +38,14 @@
     magit
     exec-path-from-shell
     ag
+    pt
     grizzl
     projectile
     helm
     org
     yasnippet
+    web-mode
+    nginx-mode
     yaml-mode
     haml-mode
     slim-mode
