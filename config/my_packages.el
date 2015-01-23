@@ -17,7 +17,7 @@
     evil-nerd-commenter
     company
     windmove
-    textmate
+    multiple-cursors
     git-gutter
     markdown-mode
     rbenv
