@@ -37,7 +37,11 @@
             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
                           (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
+;; Evil Mode
+(define-key evil-motion-state-map ";" 'smex)
+(define-key evil-motion-state-map ":" 'evil-ex)
 
+;; Web Mode
 (require 'web-mode)
 (setq web-mode-markup-indent-offset 2)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
