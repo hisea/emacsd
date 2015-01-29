@@ -23,6 +23,7 @@
     rbenv
     neotree
     highlight-indentation
+    scss-mode
     sass-mode
     coffee-mode
     ace-jump-mode
