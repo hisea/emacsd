@@ -18,7 +18,6 @@
     evil-surround
     company
     windmove
-    multiple-cursors
     git-gutter
     markdown-mode
     rbenv

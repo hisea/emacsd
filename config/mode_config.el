@@ -29,7 +29,7 @@
         (tab-mark 9 [8658 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
         ))
 
-
+;; Neotree
 (add-hook 'neotree-mode-hook
           (lambda ()
             (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
@@ -79,3 +79,7 @@
       '(("work" . ?w)
         ("home" . ?h)
         ("phone" . ?p)))
+
+;; YAML mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
