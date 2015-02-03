@@ -15,6 +15,7 @@
     evil
     evil-leader
     evil-nerd-commenter
+    evil-surround
     company
     windmove
     multiple-cursors

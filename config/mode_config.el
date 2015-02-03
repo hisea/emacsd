@@ -41,6 +41,10 @@
 (define-key evil-motion-state-map ";" 'smex)
 (define-key evil-motion-state-map ":" 'evil-ex)
 
+;; Evil Surround
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
 ;; Web Mode
 (require 'web-mode)
 (setq web-mode-markup-indent-offset 2)
