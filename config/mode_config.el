@@ -45,6 +45,9 @@
 (require 'evil-surround)
 (global-evil-surround-mode 1)
 
+;; Evil Org
+(require 'evil-org)
+
 ;; Web Mode
 (require 'web-mode)
 (setq web-mode-markup-indent-offset 2)
@@ -73,7 +76,7 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (setq org-todo-keywords
-      '((sequence "TODOi(t)" "STARTED(s)" "WAIT(w)" "|" "DONE(d)" "CANCELLED(c)")))
+      '((sequence "TODO(t)" "STARTED(s)" "WAIT(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
 (setq org-tag-alist
       '(("work" . ?w)

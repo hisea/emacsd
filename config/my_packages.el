@@ -16,6 +16,7 @@
     evil-leader
     evil-nerd-commenter
     evil-surround
+    evil-org
     company
     windmove
     git-gutter
