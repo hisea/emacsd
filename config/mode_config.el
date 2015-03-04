@@ -83,6 +83,8 @@
         ("home" . ?h)
         ("phone" . ?p)))
 
+(setq org-agenda-files '("~/.org-files"))
+
 ;; YAML mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
