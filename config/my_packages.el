@@ -55,6 +55,7 @@
     rhtml-mode
     js3-mode
     rinari
+    go-mode
     smex)
   "List of packages needs to be installed at launch")
 
