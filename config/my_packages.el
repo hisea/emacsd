@@ -43,6 +43,7 @@
     pt
     grizzl
     projectile
+    projectile-rails
     helm
     org
     yasnippet

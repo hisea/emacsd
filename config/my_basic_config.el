@@ -84,8 +84,7 @@ ido-max-prospects 10)
 ;; (textmate-mode)
 
 ;;Enable Yasnippets
-(setq yas-snippet-dirs '("~/.emacs.d/snippets/yasnippet-snippets"
-                         "~/.emacs.d/snippets/elixir-yasnippets"))
+(setq yas-snippet-dirs '("~/.emacs.d/snippets/yasnippet-snippets"))
 (yas-global-mode 1)
 (require 'neotree)
 
