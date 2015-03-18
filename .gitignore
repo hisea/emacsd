@@ -8,3 +8,5 @@ async-bytecomp.log
 ido.last
 projectile-bookmarks.eld
 smex-items
+/games/
+/projectile.cache

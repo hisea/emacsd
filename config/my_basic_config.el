@@ -123,7 +123,10 @@ ido-max-prospects 10)
   "]" 'indent-rigidly-right-to-tab-stop
   "w" 'ace-window
   "b" 'ace-jump-buffer
-  "B" 'ibuffer)
+  "B" 'ibuffer
+  "gs" 'magit-status
+  "gb" 'magit-blame-mode
+  "gl" 'magit-log)
 
 ;; Key Mappings
 ;; (global-set-key (kbd "M-/") 'hippie-expand)
