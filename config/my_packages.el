@@ -17,6 +17,8 @@
     evil-nerd-commenter
     evil-surround
     evil-org
+    ace-jump-buffer
+    ace-window
     company
     windmove
     git-gutter

@@ -118,7 +118,12 @@ ido-max-prospects 10)
   "n" 'neotree-toggle
   "\\" 'ace-jump-mode
   "/" 'evilnc-comment-or-uncomment-lines
-  "b" 'ibuffer)
+  "l" 'linum-mode
+  "[" 'indent-rigidly-left-to-tab-stop
+  "]" 'indent-rigidly-right-to-tab-stop
+  "w" 'ace-window
+  "b" 'ace-jump-buffer
+  "B" 'ibuffer)
 
 ;; Key Mappings
 ;; (global-set-key (kbd "M-/") 'hippie-expand)
@@ -136,6 +141,10 @@ ido-max-prospects 10)
 (global-set-key (kbd "M-2") 'split-window-below)
 (global-set-key (kbd "M-3") 'split-window-right)
 (global-set-key (kbd "M-0") 'delete-window)
+
+
+(global-set-key (kbd "M-[") 'indent-rigidly-left-to-tab-stop)
+(global-set-key (kbd "M-]") 'indent-rigidly-right-to-tab-stop)
 
 (windmove-default-keybindings 'super)
 (global-set-key (kbd "\C-c\C-c") 'comment-or-uncomment-region) ;; highlight region and comment
