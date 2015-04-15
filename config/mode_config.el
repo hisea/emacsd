@@ -88,3 +88,8 @@
 ;; YAML mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;; ESS Mode
+(require 'ess-site)
+
+(add-to-list 'auto-mode-alist '("\\.R\\'" . R-mode))

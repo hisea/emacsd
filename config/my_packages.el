@@ -17,6 +17,7 @@
     evil-nerd-commenter
     evil-surround
     evil-org
+    ess
     ace-jump-buffer
     ace-window
     company
