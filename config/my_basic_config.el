@@ -122,6 +122,7 @@ ido-max-prospects 10)
   "[" 'indent-rigidly-left-to-tab-stop
   "]" 'indent-rigidly-right-to-tab-stop
   "w" 'ace-window
+  "h" 'helm-mini
   "b" 'ace-jump-buffer
   "B" 'ibuffer
   "gs" 'magit-status
